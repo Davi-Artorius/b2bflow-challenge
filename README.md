@@ -22,6 +22,8 @@ CREATE TABLE contatos (
 SUPABASE_URL=sua_url
 SUPABASE_KEY=sua_key
 ZAPI_KEY=sua_key
+ZAPI_INSTANCE=sua_instance
+ZAPI_TOKEN=seu_token
 \`\`\`
 
 ### 3. Instalar Dependências
