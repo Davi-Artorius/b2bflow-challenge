@@ -7,6 +7,9 @@ load_dotenv()
 ZAPI_TOKEN = os.getenv("ZAPI_TOKEN")
 ZAPI_INSTANCE = os.getenv("ZAPI_INSTANCE")
 
+if not ZAPI_TOKEN or not ZAPI_INSTANCE:
+    raise ValueError("ZAPI_TOKEN e ZAPI_INSTANCE são obrigatórios no .env")
+
 def enviar_mensagem(telefone, mensagem):
     url = f"https://api.z-api.io/instances/{ZAPI_INSTANCE}/send-message"
     headers = {"Authorization": f"Bearer {ZAPI_TOKEN}"}
